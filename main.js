@@ -421,5 +421,5 @@ agreeBox.addEventListener('change',()=>{
   //console.log("Battery value added successfully!");
 //})
 function locate(){
-  location='/luck.html'
+  location='https://devsaheerhost.github.io/EasyRecharge/luck.html'
 }
