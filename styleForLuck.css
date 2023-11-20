@@ -1,0 +1,58 @@
+:root {
+  --primary: rgba(255, 48, 48, 1);
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+nav{
+  display: flex;
+  align-items: center;
+  background: var(--primary);
+}
+nav h1{
+  
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+.title{
+  margin-left: 8px;
+}
+section{
+  display: flex;
+  
+  justify-content: space-around;
+}
+section .card{
+  border-radius: 10px;
+  padding: 6px;
+  margin: 6px;
+  background: rgba(211, 211, 211, 1);
+  width: calc(100/3-6px);
+  filter: blur(2px);
+  visibility: hidden;
+}
+.card h3{
+  filter: blur(0px) initial;
+}
+
+
+.showError{
+  background: red;
+  color: royalblue;
+  overflow: hidden;
+  filter: none;
+}
+.checkDiv{
+  visibility: visible;
+  background: rgba(219, 219, 219, 1);
+  border-radius: 8px;
+  position: absolute;
+  padding: 6px;
+  text-align: center;
+  width: 250px;
+}

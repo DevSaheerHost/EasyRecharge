@@ -1,0 +1,174 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+:root{
+/*   --primary: rgba(255, 48, 48, 1); */
+--primary: transparent;
+--primary_button: transparent;
+}
+nav{
+  transition: all .5s;
+  background: var(--primary);
+  color: white;
+  
+}
+h1, h2, h3, h4{
+  margin: 0;
+  padding: 0px;
+  
+}
+
+.titleLayout{
+  transition: all .5s;
+  /* background-color: rgba(218, 218, 218, 1); */
+  background: transparent;
+  text-align: center;
+}
+.titleLayout h3{
+  padding: 8px;
+}
+
+.inputLayout{
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.inputLayout input{
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 28px 8px;
+  outline: none;
+  font-size: 16px;
+  
+}
+#number:after{
+  content: "+91";
+  position: fixed;
+  color: red;
+}
+select{
+  /* width: min-content; */
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+  margin: 0 8px;
+  color: gray;
+  outline: none;
+}
+.next_button{
+  /* background-color: rgba(255, 100, 100, 1); */
+  transition: all .5s;
+  background: transparent;
+  color: white;
+  text-align: center;
+  margin: 6px 20px;
+  padding: 8px 6px;
+  border-radius: 3px;
+}
+.errorLayout{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.errorLayout label{
+  padding: 0;
+  margin-right: 8px;
+  /* position: absolute; */
+  color: orangered;
+  font-weight: 300;
+}
+
+.inputNameSection{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.inputNameSection input{
+  width: 40%;
+  
+}
+#agreeBox{
+  width: 15px;
+  margin: 6px;
+}
+
+.termsLayout .agreeLabel{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-size: 10px;
+}
+
+
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  left: 84px;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 8%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+.main{
+  visibility: hidden;
+}
+
+.mainVisible{
+  visibility: visible;
+}
