@@ -37,6 +37,10 @@ nav{
   
   position: sticky;
   top: 0px;
+  background: linear-gradient(to bottom, #FFFFFF, #FFFFFF8A);
+  border-radius: 10px;
+  padding: 3px 6px;
+  
   
 }
 
