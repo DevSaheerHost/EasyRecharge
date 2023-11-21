@@ -31,7 +31,7 @@ nav{
   
 }
 
-.main h2{
+.main .title{
   margin: 8px 6px;
   animation: opacity .5s ease-out;
   
