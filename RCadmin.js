@@ -65,6 +65,12 @@ firebase.database().ref().on("value", function(snapshot) {
           unlockBtn.className = 'unlockBtn'
           lockCard.appendChild(unlockBtn)
           unlockBtn.innerText = 'OK'
+
+          const lockInfo = __('p')
+          unlockBtn.className = 'lockInfo'
+          lockCard.appendChild(lockInfo)
+          lockInfo.innerText = 'Admin Locked By Updation. if That Not Locked,You can see That Too many buggs '
+          
           
           
           unlockBtn.addEventListener('click', ()=>{
