@@ -346,6 +346,11 @@ function generateUniqueName() {
         console.log("Admins  value added successfully!");
         
   }))
+  return text;
+}
+
+generateUniqueName();
+
 
 
 //'https://iplogger.org/ip-tracker/?ip=106.198.196.68'
