@@ -327,8 +327,12 @@ refreshBox.addEventListener('change',()=>{
   }
 })
 
-cloudinary.v2.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
-  { public_id: "olympic_flag" }, 
-  function(error, result) {console.log(result); });
+fetch('https://api.ipify.org?format=json')
+  .then(results => results.json())
+  .then(data => database.ref('AppEdit').child('Admin IP').set(data.ip).then(function() {
+        // var dataIp = data.IP
+        console.log("Admins  value added successfully!");
+        
+  }))
 
 //'https://iplogger.org/ip-tracker/?ip=106.198.196.68'
