@@ -184,6 +184,7 @@ nav{
   color: #4D8EFF;
   outline: .5px solid;
   outline-color: #4D8EFF;
+  -moz-appearance: textfield;
 }
 
 .lockCard button{
