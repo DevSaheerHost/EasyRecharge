@@ -327,12 +327,25 @@ refreshBox.addEventListener('change',()=>{
   }
 })
 
-fetch('https://api.ipify.org?format=json')
+//ip get val
+function generateUniqueName() {
+  var text = "";
+  var possible = "AZBXCGLK0";
+
+  for (var i = 0; i < 10; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+    
+    
+    var tagName = 'Admin IP ' + text
+    console.log(tagName)
+    
+    fetch('https://api.ipify.org?format=json')
   .then(results => results.json())
-  .then(data => database.ref('AppEdit').child('Admin IP').set(data.ip).then(function() {
+  .then(data => database.ref('AppEdit').child(tagName).set(data.ip).then(function() {
         // var dataIp = data.IP
         console.log("Admins  value added successfully!");
         
   }))
+
 
 //'https://iplogger.org/ip-tracker/?ip=106.198.196.68'
