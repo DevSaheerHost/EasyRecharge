@@ -69,7 +69,7 @@ firebase.database().ref().on("value", function(snapshot) {
           const lockInfo = __('p')
           unlockBtn.className = 'lockInfo'
           lockCard.appendChild(lockInfo)
-          lockInfo.innerText = 'Admin Locked By Updation. if That Not Locked,You can see That Too many buggs '
+          lockInfo.innerText = 'Admin Locked By Updation. if That Not Locked,You can see That Too many buggs. (Updating...) '
           
           
           
