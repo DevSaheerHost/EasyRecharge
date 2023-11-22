@@ -1,5 +1,9 @@
 :root{
-  --primary: rgba(211, 211, 211, 1);
+ /* --primary: rgba(211, 211, 211, 1);*/
+ --primary: #2A5297;
+ --primaryText: white;
+ --primaryBody: #2A52972E;
+ --primarySm-CARD: #203F73;
 }
 
 .hori_layout{
@@ -15,6 +19,10 @@ body{
   padding: 0;
   
   font-family: sans-serif;
+
+  background: var(--primaryBody);
+  color: var(--primaryText);
+  
 }
 nav{
   background: var(--primary);
@@ -67,6 +75,7 @@ nav{
   
   display: flex;
   align-items: center;
+  background: var(--primarySm-CARD);
 }
 
 .card_sm_dummy{
@@ -201,7 +210,8 @@ nav{
 }
 
 .title{
-  background: white;
+  /*background: white;*/
+  color: var(--primary);
 }
 ::placeholder{
   color: #3868BC;
