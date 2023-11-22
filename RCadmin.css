@@ -210,7 +210,7 @@ nav{
 }
 
 .title{
-  /*background: white;*/
+  background: white;
   color: var(--primary);
 }
 ::placeholder{
