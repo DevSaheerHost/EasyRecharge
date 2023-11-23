@@ -1,9 +1,12 @@
 :root{
- /* --primary: rgba(211, 211, 211, 1);*/
+ /*  --primary: rgba(211, 211, 211, 1); */
  --primary: #2A5297;
  --primaryText: white;
  --primaryBody: #2A52972E;
  --primarySm-CARD: #203F73;
+ --primary-white: #FFFFFF;
+ --primaryTItle: #000000;
+ --primary-theme-btn: #EEF0FF;
 }
 
 .hori_layout{
@@ -15,14 +18,24 @@
 }
 
 body{
+  transition: all .5s;
   margin: 0;
   padding: 0;
-  
-  font-family: sans-serif;
-
-  background: var(--primaryBody);
+  background: var(--primaryBody);/* y */
   color: var(--primaryText);
   
+  font-family: sans-serif;
+}
+
+.bodyDarck{
+  transition: all .5s ease-in-out;
+  --primaryBody: #212127;
+  --primary: #000000;
+  --primarySm-CARD: #212127;
+  --primary-white: #000000;
+  --primaryTItle: #D5D9FF;
+  --primary-theme-btn: #D5D9FF;
+  color: #D5D9FF;
 }
 nav{
   background: var(--primary);
@@ -45,10 +58,11 @@ nav{
   
   position: sticky;
   top: 0px;
-  background: linear-gradient(to bottom, #FFFFFF, #FFFFFF8A);
+  /* background: linear-gradient(to bottom, #FFFFFF, #FFFFFF8A); */
+  background: var(--primary-white);
+  color: var(--primaryTItle);
   border-radius: 10px;
   padding: 3px 6px;
-  
   
 }
 
@@ -69,13 +83,13 @@ nav{
 .card_sm{
   width: 50px;
   height: 50px;
-  background: rgba(170, 170, 170, 1);
+  /* background: rgba(170, 170, 170, 1); */
+  background: var(--primarySm-CARD);
   border-radius: 10px;
   text-align: center;
   
   display: flex;
   align-items: center;
-  background: var(--primarySm-CARD);
 }
 
 .card_sm_dummy{
@@ -91,7 +105,6 @@ nav{
   margin: auto;
   color: white;
 }
-
 
 
 
@@ -171,6 +184,7 @@ nav{
   margin: 10px;
   max-width: 400px;
   
+  
   color: #4D8EFF;
   text-align: center;
   
@@ -191,8 +205,10 @@ nav{
   border-radius: 10px;
   padding: 8px 18px;
   color: #4D8EFF;
+  
   outline: .5px solid;
   outline-color: #4D8EFF;
+  
   -moz-appearance: textfield;
 }
 
@@ -203,14 +219,15 @@ nav{
   color: #4D8EFF;
   
   padding: 6px;
+  
   margin-left: 70%;
-  margin-top:10px;
+  margin-top: 10px;
+  
   outline: .5px solid;
   outline-color: #4D8EFF;
 }
 
 .title{
-  background: white;
   color: var(--primary);
 }
 ::placeholder{
@@ -218,4 +235,25 @@ nav{
 }
 .lockCard p{
   color: #2A5297;
+}
+
+
+.themeButton{
+  height: 22px;
+  width: 42px;
+  background: var(--primary-theme-btn);
+  border-radius: 500px;
+  margin: auto;
+  margin-right: 0;
+}
+.themeBall{
+  transition: all .2s;
+  height: 20px;
+  width: 20px;
+  background: black;
+  margin: 1px;
+  border-radius: 500px;
+}
+.themeBallOn{
+  transform: translateX(20px)
 }
