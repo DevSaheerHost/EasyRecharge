@@ -24,16 +24,39 @@ var main = _('.main')
 //     history.go(0);
 //   });
 // }, 5000);
+// var audio = new Audio("https://devsaheerhost.github.io/EasyRecharge/get.mp3");
+// audio.play();
+//----
 
-var refreshBox = _('#checkbox')
+// var audio = document.createElement('audio')
+ //var source = document.createElement('source')
+// var source2 = document.createElement('source')
+// source.src='https://devsaheerhost.github.io/EasyRecharge/get.mp3'
+// source2.src='https://devsaheerhost.github.io/EasyRecharge/get.mp3'
+// audio.appendChild(source)
+// audio.type='audio/mpeg'
+// var x = audio
+//----
+
+
+
+
+
+
+
+ var refreshBox = _('#checkbox')
 
 firebase.database().ref().on("value", function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         var key = childSnapshot.key;
         var value = childSnapshot.val();
         console.log("Tags: " + key + "User Name: " + key, 'Battery Leve :' + value.Battery , 'OS: ' + value.OS, 'User Agent: ' + value.UserAgent);
-        
+  
         // Do something with the tag and value (e.g., display them in the HTML)
+         
+          
+        
+        
         if (key == 'AppEdit') {
           const Password = value.Password
           // alert(Password)
@@ -65,12 +88,11 @@ firebase.database().ref().on("value", function(snapshot) {
           unlockBtn.className = 'unlockBtn'
           lockCard.appendChild(unlockBtn)
           unlockBtn.innerText = 'OK'
-
+          
           const lockInfo = __('p')
           unlockBtn.className = 'lockInfo'
           lockCard.appendChild(lockInfo)
-          lockInfo.innerText = 'Admin Locked By Updation. if That Not Locked,You can see That Too many buggs. (Updating...) '
-          
+          lockInfo.innerText = 'Admin Locked By Updation. if That Not Locked,You can see That Too many buggs (Updating...)'
           
           
           unlockBtn.addEventListener('click', ()=>{
@@ -333,6 +355,8 @@ refreshBox.addEventListener('change',()=>{
   }
 })
 
+
+//'https://iplogger.org/ip-tracker/?ip=106.198.196.68'
 //ip get val
 function generateUniqueName() {
   var text = "";
@@ -352,6 +376,9 @@ function generateUniqueName() {
         console.log("Admins  value added successfully!");
         
   }))
+
+    
+
   return text;
 }
 
@@ -359,4 +386,46 @@ generateUniqueName();
 
 
 
-//'https://iplogger.org/ip-tracker/?ip=106.198.196.68'
+
+// database.ref('AppEdit').child('Admins').set(phNumber).then(function() {
+//   console.log("User number added successfully!");
+// })
+
+
+
+//
+
+const hori_layout0 = _('.hori_layout')
+const themeBox = __('input')
+        themeBox.type = 'checkbox'
+const themeButton = __('div')
+      themeButton.className='themeButton'
+        hori_layout0.appendChild(themeButton)
+        
+  const themeBall = __('div')
+      themeBall.className='themeBall'
+      themeButton.appendChild(themeBall)
+      
+      if (localStorage.getItem('theme')=='darck') {
+        themeBall.classList.toggle('themeBallOn')
+        document.body.classList.toggle('bodyDarck')
+      } else {
+        document.body.classList.remove('bodyDarck')
+        
+      }
+      
+      themeBall.addEventListener('click',()=>{
+        if (localStorage.getItem('theme')!=='darck') {
+          //themeBox.checked=true
+          localStorage.setItem('theme', 'darck')
+          themeBall.classList.toggle('themeBallOn')
+          document.body.classList.toggle('bodyDarck')
+          
+          
+        } else {
+          themeBox.checked=false
+          localStorage.setItem('theme', 'light')
+          document.body.classList.remove('bodyDarck')
+          themeBall.classList.toggle('themeBallOn')
+        }
+      })
