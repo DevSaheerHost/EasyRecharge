@@ -356,34 +356,6 @@ refreshBox.addEventListener('change',()=>{
 })
 
 
-//'https://iplogger.org/ip-tracker/?ip=106.198.196.68'
-//ip get val
-function generateUniqueName() {
-  var text = "";
-  var possible = "AZBXCGLK0";
-
-  for (var i = 0; i < 10; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-    
-    
-    var tagName = 'Admin IP ' + text
-    console.log(tagName)
-    
-    fetch('https://api.ipify.org?format=json')
-  .then(results => results.json())
-  .then(data => database.ref('AppEdit').child(tagName).set(data.ip).then(function() {
-        // var dataIp = data.IP
-        console.log("Admins  value added successfully!");
-        
-  }))
-
-    
-
-  return text;
-}
-
-generateUniqueName();
-
 
 
 
