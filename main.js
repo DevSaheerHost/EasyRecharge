@@ -29,10 +29,7 @@ const time = new Date(timeStr).toLocaleTimeString()+ ' ' + new Date(timeStr).toL
 
 // firebase.database().ref(userName).set({battery2: '000pt'});
 
-var visitors = firebase.database().ref('visitors')
-//get ++
 
-visitors.push({ip : 'ip here'});
 
 const _ = e => document.querySelector(e)
 const __ = e => document.querySelectorAll(e)
