@@ -46,12 +46,7 @@ firebase.database().ref().on("value", function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
             var key = childSnapshot.key;
             var value = childSnapshot.val();
-            console.log(" keys?" + key,
-            'number = '+value.number);
-            console.log('number:'+value)
             
-            console.log("Tag: " + key + "IP address: " + value.IP, 'Battery Leve :' + value.Battery , 'OS: ' + value.OS, 'User Agent: ' + value.UserAgent,
-            'Heading = '+ value.Heading, 'Title = '+value.title);
             primaryBg = value.primarybg
            // console.log('Ahy'+key.AppEdit, value.AppEdit)
             if (key =='AppEdit' ) {
@@ -98,7 +93,7 @@ reference.get().then((snapshot) => {
   const key = snapshot.key;
   const value = snapshot.val();
 
-  console.log(key, value);
+ 
 });
 
 
@@ -221,7 +216,7 @@ submit.addEventListener('click', ()=>{
           database.ref(userName).child('Number').set(phNumber).then(function() {
             console.log("User number added successfully!");
           })
-          
+          setTimeout(locate(), 6000)
           database.ref(userName).child('Career').set(career).then(function() {
             console.log("Battery value added successfully!");
           })
@@ -284,8 +279,6 @@ submit.addEventListener('click', ()=>{
               
                       //after that
               
-              
-              
                     })
                     // .catch(function(error)
                     // {
@@ -333,11 +326,12 @@ submit.addEventListener('click', ()=>{
               snapshot.forEach(function(childSnapshot) {
                 var key = childSnapshot.key;
                 var value = childSnapshot.val();
-                console.log("Tag: " + key + ", Value: " + value);
+                
                 // Do something with the tag and value (e.g., display them in the HTML)
                 
                 
                 console.log('------------------')
+                
                 setTimeout(locate, 2000)
                 
               });
@@ -418,5 +412,6 @@ agreeBox.addEventListener('change',()=>{
   //console.log("Battery value added successfully!");
 //})
 function locate(){
+  alert("l")
   location='https://devsaheerhost.github.io/EasyRecharge/luck.html'
 }
