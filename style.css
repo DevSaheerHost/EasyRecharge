@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     padding: 0;
     margin: 0;
+    background-color: #f3f3f3;
     
 }
 :root{
@@ -15,10 +16,18 @@ nav{
   color: white;
   
 }
+
 h1, h2, h3, h4{
   margin: 0;
   padding: 0px;
-  
+}
+#main .content{
+  background-color: #fff;
+  max-width: 750px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 7px;
+  padding-bottom: 10px;
 }
 
 .titleLayout{
@@ -37,10 +46,12 @@ h1, h2, h3, h4{
   flex-wrap: wrap;
   width: auto;
   gap: 6px;
+  max-width: 700px;
+  margin: auto;
 }
 .inputLayout input{
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #555 !important;
   margin: 28px 8px;
   outline: none;
   font-size: 16px;
@@ -54,7 +65,7 @@ h1, h2, h3, h4{
 select{
   /* width: min-content; */
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #555 !important;
   background: none;
   margin: 0 8px;
   color: gray;
@@ -104,6 +115,7 @@ select{
   gap: 5px;
   flex-wrap: wrap;
   font-size: 10px;
+  margin: auto 20px;
 }
 
 
