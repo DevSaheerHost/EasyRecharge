@@ -36,6 +36,8 @@ h1, h2, h3, h4{
   flex-flow: column;
   flex-wrap: wrap;
   gap: 6px;
+  max-width: 750px;
+  margin: auto;
 }
 .inputLayout input{
   border: none;
@@ -113,7 +115,7 @@ select{
   display: inline-block;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
+  -moz-user-select: none ;
   -ms-user-select: none;
   user-select: none;
   left: 84px;
